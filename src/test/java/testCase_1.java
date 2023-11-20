@@ -36,6 +36,14 @@ public class testCase_1 {
         // 2. Navigate to url 'http://automationexercise.com'
         driver.navigate().to("http://automationexercise.com");
 
+        // 3. Verify that home page is visible successfully
+        WebElement homePage = driver.findElement(By.xpath("//img [@alt='Website for automation practice']"));
+        if (homePage.isDisplayed()){
+            System.out.println("Home page is visible");
+        }else{
+            System.out.println("home page is NOT visible");
+        }
+
         // 4. Click on 'Signup / Login' button
         driver.findElement(By.xpath("//a[@href='/login']")).click();
 
