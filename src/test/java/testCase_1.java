@@ -25,6 +25,7 @@ public class testCase_1 {
     // 16. Verify that 'Logged in as username' is visible
     // 17. Click 'Delete Account' button
     // 18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
+    // 19. Close the page.
 
     public static void main(String[] args) throws InterruptedException {
         // 1. Launch browser
@@ -130,9 +131,8 @@ public class testCase_1 {
         }else
             System.out.println("'ACCOUNT DELETED!' is NOT visible");
 
-
-
-
+        // 19. Close the page.
+            driver.quit();
 
     }
 }
