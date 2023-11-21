@@ -1,4 +1,5 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +18,8 @@ public class testCase_2 {
     // 8. Verify that 'Logged in as username' is visible
     // 9. Click 'Delete Account' button
     // 10. Verify that 'ACCOUNT DELETED!' is visible
-    public static void main(String[] args) {
+    @Test
+    public void testCase2() {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
