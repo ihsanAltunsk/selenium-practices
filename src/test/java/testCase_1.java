@@ -45,7 +45,8 @@ public class testCase_1 {
         }
 
         // 4. Click on 'Signup / Login' button
-        driver.findElement(By.xpath("//a[@href='/login']")).click();
+        driver.findElement(By.partialLinkText("Login")).click();
+
 
         // 5. Verify 'New User Signup!' is visible
         WebElement newUserSignUp = driver.findElement(By.xpath("//div[@class='signup-form']"));
