@@ -50,7 +50,7 @@ public class testCase_1 {
 
 
         // 5. Verify 'New User Signup!' is visible
-        WebElement newUserSignUp = driver.findElement(By.xpath("//div[@class='signup-form']"));
+        WebElement newUserSignUp = driver.findElement(By.name("name"));
         if (newUserSignUp.isDisplayed()){
             System.out.println("'New User Signup!' is visible");
         }else {
@@ -58,7 +58,7 @@ public class testCase_1 {
         }
 
         // 6. Enter name and email address
-        driver.findElement(By.xpath("//input[@type='text']")).sendKeys("İhsan");
+        driver.findElement(By.xpath("//input[@type='text']")).sendKeys("İhsan") ;
         driver.findElement(By.xpath("//input[@type='email' and @data-qa='signup-email']")).sendKeys("altnskihsan@gmail.com");
 
         // 7. Click 'Signup' button
@@ -71,7 +71,7 @@ public class testCase_1 {
         }else{
             System.out.println("'ENTER ACCOUNT INFORMATION' is NOT visible");
         }
-        // "//[@='']"
+
         // 9. Fill details: Title, Name, Email, Password, Date of birth
         driver.findElement(By.xpath("//input[@id='id_gender1']")).click();
         driver.findElement(By.xpath("//input[@id='name']")).clear();
@@ -113,7 +113,7 @@ public class testCase_1 {
         driver.findElement(By.xpath("//a[text()='Continue']")).click();
 
         // 16. Verify that 'Logged in as username' is visible
-        WebElement logged = driver.findElement(By.xpath("//i[@class='fa fa-user']"));
+        WebElement logged = driver.findElement(By.xpath("//li[10]"));
         if (logged.isDisplayed()){
             System.out.println("'Logged in as username' is visible");
         }else{
