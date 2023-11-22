@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class deneme {
-        //Launch browser
+        // - Launch browser
         //2. Navigate to url 'http://automationexercise.com'
         //3. Verify that home page is visible successfully
 
