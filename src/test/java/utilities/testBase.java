@@ -17,9 +17,6 @@ import java.time.Duration;
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-
-            // a. Go to the given web page https://testotomasyonu.com/form
-            driver.get("https://testotomasyonu.com/form");
         }
         @After
         public void teardown(){
