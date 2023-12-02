@@ -79,5 +79,10 @@ public class TablePractice_2 extends TestBase {
         }
 
         //10. Create a method that prints the data when I enter the number of rows and columns on the Test page.
+        wantedData(3,5);
+    }
+    public void wantedData(int rowNo, int columnNo){
+        String path = "//*[@role='rowgroup'][" + rowNo + "]//*[@role='gridcell'][" + columnNo + "]";
+        System.out.println("Wanted data : " + driver.findElement(By.xpath(path)).getText());
     }
 }
