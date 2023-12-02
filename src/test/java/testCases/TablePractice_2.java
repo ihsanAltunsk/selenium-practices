@@ -67,7 +67,16 @@ public class TablePractice_2 extends TestBase {
         System.out.println(thirdColumnElementsStr);
 
         //9. Print the Salary of the person whose "First Name" is Kierra in the table
-
+        String rowCategoryXpath ="";
+        String rowPriceXpath = "";
+        for (int i = 1; i <= rowElements.size() ; i++) {
+            rowCategoryXpath = "((//*[@role='trow'])[" + i + "]/*[@role='tdata'])[2]";
+            rowPriceXpath = "((//*[@role='trow'])[" + i + "]/*[@role='tdata'])[3]";
+            if (driver.findElement(By.xpath(rowCategoryXpath)).getText().equals("Kierra")){
+                System.out.println("Kierra's salary : " +
+                        driver.findElement(By.xpath(rowPriceXpath)).getText());
+            }
+        }
 
         //10. Create a method that prints the data when I enter the number of rows and columns on the Test page.
     }
