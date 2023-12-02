@@ -60,8 +60,21 @@ public class TablePractice extends TestBase {
         }
 
         // 8- Print the table headers as a list
-        // 9- Create a method that takes the row and column numbers as parameters
+        List<String> headerElementsStr = ReusableMethods.convertToString(columnElements);
+        System.out.println("Headers: " + headerElementsStr);
+
+        // 9- Test if the category value in the 4th row is "Furniture"
+        String actualValue = driver.findElement(By.xpath("//table/tbody/tr[4]/td[2]")).getText();
+        Assert.assertEquals("Furniture",actualValue);
+
+        // 10- Create a method that takes the row and column numbers as parameters
         //    and returns the information in that cell
-        // 10- Test if the category value in the 4th row is "Furniture"
+
+        System.out.println(rowColumn(2,3));
+    }
+    public String rowColumn(int rowNumber, int columnNumber){
+        String path = "//table/tbody/tr[" + rowNumber + "]/td[" + columnNumber + "]";
+        return driver.findElement(By.xpath(path)).getText();
+
     }
 }
