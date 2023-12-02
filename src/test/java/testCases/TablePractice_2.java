@@ -70,8 +70,8 @@ public class TablePractice_2 extends TestBase {
         String rowCategoryXpath ="";
         String rowPriceXpath = "";
         for (int i = 1; i <= rowElements.size() ; i++) {
-            rowCategoryXpath = "//*[@role='rowgroup'][" + i + "//*[@role='gridcell'][1]";
-            rowPriceXpath = "//*[@role='rowgroup'][\" + i + \"//*[@role='gridcell'][5]";
+            rowCategoryXpath = "//*[@role='rowgroup'][" + i + "]//*[@role='gridcell'][1]";
+            rowPriceXpath = "//*[@role='rowgroup'][" + i + "]//*[@role='gridcell'][5]";
             if (driver.findElement(By.xpath(rowCategoryXpath)).getText().equals("Kierra")){
                 System.out.println("Kierra's salary : " +
                         driver.findElement(By.xpath(rowPriceXpath)).getText());
