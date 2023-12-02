@@ -15,6 +15,6 @@ public class deneme extends TestBase {
     public void test01() throws InterruptedException {
 
         Faker f = new Faker();
-        f
+
     }
 }

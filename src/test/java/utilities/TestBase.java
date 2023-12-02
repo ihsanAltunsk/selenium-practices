@@ -20,7 +20,7 @@ import java.time.Duration;
         }
         @After
         public void teardown(){
-
+            driver.quit();
         }
     }
 
