@@ -39,21 +39,32 @@ public class TablePractice_2 extends TestBase {
         List<String> allElementsStr = ReusableMethods.convertToString(allElements);
         List<String> actualAllElementsStr = new ArrayList<>();
         for (int i = 0; i < allElementsStr.size();i++){
-            if (allElementsStr.get(i).equals(" ")){
-
-            }else {
+            if (!(allElementsStr.get(i).equals(" "))){
                 actualAllElementsStr.add(i,allElementsStr.get(i));
             }
         }
         System.out.println(actualAllElementsStr);
 
         //5. Print how many non-empty cells (data) are in the table
-
+        int count = 0;
+        for (int i = 0; i < allElementsStr.size();i++){
+            if (!(allElementsStr.get(i).equals(" "))){
+                count++;
+            }
+        }
+        System.out.println("Number of non-empty cells: " + count );
 
         //6. Print the number of rows in the table
+        List<WebElement> rowElements = driver.findElements(By.xpath("//*[@class='rt-tbody']//*[@role='row']"));
+        System.out.println("Number of rows: " + rowElements.size());
+
         //7. Print the number of columns in the table
+        System.out.println("Number of columns: " + headerElements.size());
+
         //8. Print the 3rd column in the table
+
+
         //9. Print the Salary of the person whose "First Name" is Kierra in the table
-        //10. Create a method on the Page page, let me print the data when I enter the number of rows and columns on the Test page.
+        //10. Create a method that prints the data when I enter the number of rows and columns on the Test page.
     }
 }
