@@ -62,9 +62,13 @@ public class TablePractice_2 extends TestBase {
         System.out.println("Number of columns: " + headerElements.size());
 
         //8. Print the 3rd column in the table
-
+        List<WebElement> thirdColumnElements = driver.findElements(By.xpath("//*[@role='row']/*[@role='gridcell'][3]"));
+        List<String> thirdColumnElementsStr = ReusableMethods.convertToString(thirdColumnElements);
+        System.out.println(thirdColumnElementsStr);
 
         //9. Print the Salary of the person whose "First Name" is Kierra in the table
+
+
         //10. Create a method that prints the data when I enter the number of rows and columns on the Test page.
     }
 }
