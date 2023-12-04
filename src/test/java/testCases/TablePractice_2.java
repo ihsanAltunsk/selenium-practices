@@ -35,15 +35,9 @@ public class TablePractice_2 extends TestBase {
         System.out.println(headerElementsStr.get(2));
 
         //4. Print all data in the table
-        List<WebElement> allElements = driver.findElements(By.xpath("//*[@role='row']/*[@role='gridcell']"));
+        List<WebElement> allElements = driver.findElements(By.xpath("//*[@role='gridcell']"));
         List<String> allElementsStr = ReusableMethods.convertToString(allElements);
-        List<String> actualAllElementsStr = new ArrayList<>();
-        for (int i = 0; i < allElementsStr.size();i++){
-            if (!(allElementsStr.get(i).equals(" "))){
-                actualAllElementsStr.add(i,allElementsStr.get(i));
-            }
-        }
-        System.out.println(actualAllElementsStr);
+        System.out.println(allElementsStr);
 
         //5. Print how many non-empty cells (data) are in the table
         int count = 0;
